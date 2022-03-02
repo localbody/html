@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #333333;
+    height: 100vh;
+}
+
+.compare {
+    position: relative;
+    height: 400px;
+    width: 700px;
+    overflow: hidden;
+}
+
+.compare__delimeter {
+    position: absolute;
+    top: 0px;
+    width: 3px;
+    height: 100%;
+    background: #333333;
+    cursor: grab;
+    z-index: 2;
+}
+
+.compare__delimeter:before, .compare__delimeter:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 40px;
+    background: #222222;
+    border: 1px solid #f2f2f2;
+    transform: translate(0, -50%);
+}
+
+.compare__delimeter:before {
+    left: 5px;
+    border-radius: 3px 20px 20px 3px;
+}
+
+.compare__delimeter:after {
+    right: 5px;
+    border-radius: 20px 3px 3px 20px;
+}
+
+.compare__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.compare__image img {
+    width: 700px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.compare__after {
+    filter: grayscale(1);
+}

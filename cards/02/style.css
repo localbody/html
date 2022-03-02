@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+  }
+
+  section {
+    width: 100%;
+    max-width: 1280px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: "Roboto", sans-serif;
+    padding: 15px;
+  }
+  section .material-card {
+    position: relative;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px lightgray;
+    height: auto;
+    margin: 10px auto;
+    max-width: 320px;
+    width: 100%;
+    transition: 0.3s linear;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 6px;
+  }
+  section .material-card__img-holder {
+    height: 250px;
+    background: url("https://cdn.pixabay.com/photo/2020/07/03/16/42/amsterdam-5367020__340.jpg") no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  section .material-card__body {
+    position: relative;
+    height: auto;
+    padding: 15px;
+  }
+  section .material-card__body p {
+    margin-top: 10px;
+    line-height: 1.25;
+  }
+  section .material-card__title {
+    position: relative;
+    display: flex;
+  }
+  section .material-card__title h3 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  section .material-card__title h3:after {
+    content: "";
+    display: block;
+    width: auto;
+    height: 2px;
+    margin-top: 3px;
+    background-color: #fd6c01;
+  }
+  section .material-card__title span {
+    position: absolute;
+    right: 8%;
+    top: -35px;
+    font-size: 23px;
+    color: white;
+    background-color: #fd6c01;
+    padding: 7px 12px;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 3px 7px lightgray;
+    transition: 0.2s linear;
+  }
+  section .material-card__title span:hover {
+    background-color: #e46101;
+    box-shadow: 0 0px 0px lightgray;
+  }
+  section .material-card__footer {
+    position: relative;
+  }
+  section .material-card__footer .footer-link {
+    margin: 15px;
+    color: #c6c6c6;
+    text-decoration: none;
+    text-align: center;
+  }
+  section .material-card__footer .footer-link:after {
+    content: "";
+    display: block;
+    max-width: 0%;
+    margin-left: 15px;
+    height: 1.5px;
+    margin-top: 2px;
+    background-color: #c6c6c6;
+    transition: 0.2s linear;
+  }
+  section .material-card__footer .footer-link:hover:after {
+    max-width: 100%;
+  }
+  section .material-card__footer ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  section .material-card__overlay {
+    display: block;
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    transition: 0.2s linear;
+  }
+  section .overlay__closer {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  section .overlay__closer h3 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  section .overlay__closer p {
+    display: inline-block;
+    margin-left: auto;
+    font-size: 25px;
+    background-color: #fd6c01;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 3px 7px lightgray;
+    transition: 0.2s linear;
+  }
+  section .overlay__closer p:hover {
+    background-color: #e46101;
+    box-shadow: 0 0px 0px lightgray;
+  }
+  section .overlay__body {
+    overflow-y: auto;
+    padding: 15px;
+    line-height: 1.25;
+  }
+  section .overlay__body ul {
+    margin: 10px 0px;
+    padding-left: 10px;
+  }
+  section .overlay__body ul li:before {
+    content: "";
+    position: relative;
+    display: inline-block;
+    bottom: 2px;
+    width: 7px;
+    height: 7px;
+    margin-right: 5px;
+    border-radius: 30px;
+    background-color: #fd6c01;
+  }

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <p class="text-center u-push-b">Mask</p>
+        <div class="demo-wrapper" style="margin-bottom: 2.5rem;">
+
+          <span class="fake-circle"></span>
+          <svg role="none" class="avatar-wrapper">
+            <mask id="test5">
+              <circle cx="50" cy="50" r="50" fill="white"></circle>
+              <circle fill="black" class="mask-item" cy="50" r="50"></circle>
+            </mask>
+            <g mask="url(#test5)">
+              <circle fill="#fff" cx="50" cy="50" r="50" stroke="rgba(0,0,0,0.1)" stroke-width="2"></circle>
+            </g>
+          </svg>
+        </div>
+
+        <p class="text-center u-push-b">Result</p>
+        <svg role="none" class="avatar-wrapper test-6">
+          <style>
+            .test-6-circle {
+              cx: var(--cx);
+            }
+          </style>
+          <mask id="test6">
+            <circle cx="50" cy="50" r="50" fill="white"></circle>
+            <circle class="test-6-circle" fill="black" cy="50" r="50"></circle>
+          </mask>
+          <g mask="url(#test6)">
+            <image x="0" y="0" height="100%" preserveAspectRatio="xMidYMid slice" width="100%" xlink:href="https://ishadeed.com/assets/shadeed.jpg"></image>
+          </g>
+        </svg>
+
+        <form action="">
+          <p>
+            <label for="cx">CX</label>
+            <input type="range" min="-50" max="50" name="" id="cx">
+          </p>
+        </form>
+
+        <div class="demo-content">
+          <p>This is a demo from <a href="https://ishadeed.com/article/thinking-about-the-cut-out-effect/">Thinking About The Cut Out Effect: CSS or SVG?</a> by <a href="https://ishadeed.com/">Ahmad Shadeed</a>.</p>
+        </div>
+      </div>
+
+    <script src="./jquery.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

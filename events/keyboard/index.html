@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1><code>KeyboardEvent.key</code> and <code>KeyBoardEvent.code</code></h1>
+
+    <p>New to DOM 3, we finally have a standard and cross-platform list of key codes! Read more:</p>
+
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code">KeyboardEvent.code at MDN</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key">KeyboardEvent.key at MDN</a></li>
+      <li><a href="https://www.w3.org/TR/uievents-code/">UI Events KeyboardEvent code Values</a></li>
+      <li><a href="https://www.w3.org/TR/uievents-key/">UI Events KeyboardEvent key Values</a></li>
+    </ul>
+
+    <p>Available since Firefox 38 and <a href="https://crbug.com/227231">Chrome 45 (but probably later)</a>.</p>
+
+    <h2>Which one should I use? <code>.key</code> or <code>.code</code>?</h2>
+
+    <p><code>.key</code> returns the logical meaning of the pressed key. For instance, the numpad-8 key will return either <code>"ArrowUp"</code> or <code>"8"</code>.</p>
+
+    <p><code>.code</code> returns the physical key being pressed. For instance, <code>"Numpad8"</code> is always returned, regardless of NumLock status.</p>
+
+    <p>To decide which one you want to use, ask yourself: am I interested in the meaning of the key, or in the physical location? If you are building a game that uses <a href="https://en.wikipedia.org/wiki/Arrow_keys#WASD_keys">WASD keys</a>, then use <code>.code</code>, as it will work across any keyboard layout. However, if you are interested in detecting if specific inputs were pressed (e.g. arrows, home, end, page up, page down), then use <code>.key</code>. I believe most applications will end up using <code>.key</code> instead of <code>.code</code>.</p>
+
+    <h2>Demo: type in the textarea</h2>
+
+    <label><input type="checkbox" id="show_input"> Show <code>input</code> events</label>
+    <label><input type="checkbox" id="show_keypress"> Show <code>keypress</code> events (deprecated)</label>
+    <label><input type="checkbox" id="show_keydown" checked> Show <code>keydown</code> events</label>
+    <label><input type="checkbox" id="show_keyup" checked> Show <code>keyup</code> events</label>
+    <label><input type="checkbox" id="show_repeat" checked> Show events that are repeating</label>
+
+    <textarea id="demo"></textarea>
+
+    <table id="results">
+      <thead>
+        <tr>
+          <th>Event.type</th>
+          <th>.key</th>
+          <th>.code</th>
+          <th class="deprecated">.charCode</th>
+          <th class="deprecated">.keyCode</th>
+          <th class="deprecated">.which</th>
+          <th>.ctrlKey</th>
+          <th>.shiftKey</th>
+          <th>.altKey</th>
+          <th>.metaKey</th>
+          <th>.repeat</th>
+          <th>.isComposing</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+
+    <h2>Even better demo</h2>
+
+    <p><a href="https://dvcs.w3.org/hg/d4e/raw-file/tip/key-event-test.html">https://dvcs.w3.org/hg/d4e/raw-file/tip/key-event-test.html</a></p>
+
+    <script src="./jquery.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
