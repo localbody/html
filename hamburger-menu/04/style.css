@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+body {
+  background-color: #edc79b;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.menu {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.menu:hover {
+  cursor: pointer;
+}
+
+.hambergerIcon {
+  height: 10px;
+  width: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50px;
+  background-color: #4a2545;
+  transform: translate(-50%, -50%) rotate(0deg);
+  transition: all ease 0.5s;
+}
+.hambergerIcon::before, .hambergerIcon::after {
+  content: "";
+  position: absolute;
+  height: inherit;
+  border-radius: inherit;
+  background-color: inherit;
+  margin: auto;
+  width: 50%;
+  transition: all ease 0.5s;
+}
+.hambergerIcon::before {
+  top: -20px;
+  left: 0;
+  transform-origin: left;
+}
+.hambergerIcon::after {
+  bottom: -20px;
+  right: 0;
+  transform-origin: right;
+}
+
+.open {
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+.open::before {
+  top: 0;
+  transform: translateX(100%) rotate(-90deg);
+}
+.open::after {
+  bottom: 0;
+  transform: translateX(-100%) rotate(-90deg);
+}
