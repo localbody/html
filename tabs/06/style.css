@@ -1,0 +1,439 @@
+:root {
+    --size: 700px;
+  }
+
+  .container {
+    width: var(--size);
+    height: 300px;
+    overflow: hidden;
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: repeat(10, var(--size));
+  }
+
+  .slide {
+    transition: all 0.6s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  button {
+    height: 30px;
+    border: none;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+  }
+
+  button.selected {
+    background-color: red;
+  }
+
+  button:active, button:focus {
+    outline: none;
+  }
+
+  button:nth-of-type(1) {
+    margin-right: 20px;
+  }
+
+  .slide:nth-child(1) {
+    background-color: #b5edd1;
+  }
+
+  .slide:nth-child(2) {
+    background-color: #b09282;
+  }
+
+  .slide:nth-child(3) {
+    background-color: #d0e2d3;
+  }
+
+  .slide:nth-child(4) {
+    background-color: #995692;
+  }
+
+  .slide:nth-child(5) {
+    background-color: #376f9a;
+  }
+
+  .slide:nth-child(6) {
+    background-color: #a8c997;
+  }
+
+  .slide:nth-child(7) {
+    background-color: #99c0c2;
+  }
+
+  .slide:nth-child(8) {
+    background-color: #d8d47d;
+  }
+
+  .slide:nth-child(9) {
+    background-color: #95a86b;
+  }
+
+  .slide:nth-child(10) {
+    background-color: #8b6437;
+  }
+
+  .slide:nth-child(11) {
+    background-color: #4564d3;
+  }
+
+  .slide:nth-child(12) {
+    background-color: #5f3f78;
+  }
+
+  .slide:nth-child(13) {
+    background-color: #d8d883;
+  }
+
+  .slide:nth-child(14) {
+    background-color: #aac2cb;
+  }
+
+  .slide:nth-child(15) {
+    background-color: #222e7c;
+  }
+
+  .slide:nth-child(16) {
+    background-color: #83afa3;
+  }
+
+  .slide:nth-child(17) {
+    background-color: #e6c6d9;
+  }
+
+  .slide:nth-child(18) {
+    background-color: #916fce;
+  }
+
+  .slide:nth-child(19) {
+    background-color: #e1bcc8;
+  }
+
+  .slide:nth-child(20) {
+    background-color: #3b6354;
+  }
+
+  .slide:nth-child(21) {
+    background-color: #2f626f;
+  }
+
+  .slide:nth-child(22) {
+    background-color: #b3da95;
+  }
+
+  .slide:nth-child(23) {
+    background-color: #6955aa;
+  }
+
+  .slide:nth-child(24) {
+    background-color: #d7edce;
+  }
+
+  .slide:nth-child(25) {
+    background-color: #3e9868;
+  }
+
+  .slide:nth-child(26) {
+    background-color: #b2f0d4;
+  }
+
+  .slide:nth-child(27) {
+    background-color: #b0bbe8;
+  }
+
+  .slide:nth-child(28) {
+    background-color: #744959;
+  }
+
+  .slide:nth-child(29) {
+    background-color: #3347cc;
+  }
+
+  .slide:nth-child(30) {
+    background-color: #d67ab9;
+  }
+
+  .slide:nth-child(31) {
+    background-color: #988c57;
+  }
+
+  .slide:nth-child(32) {
+    background-color: #bf9088;
+  }
+
+  .slide:nth-child(33) {
+    background-color: #cdf4ed;
+  }
+
+  .slide:nth-child(34) {
+    background-color: #afd0bd;
+  }
+
+  .slide:nth-child(35) {
+    background-color: #88221b;
+  }
+
+  .slide:nth-child(36) {
+    background-color: #e7c0c1;
+  }
+
+  .slide:nth-child(37) {
+    background-color: #905bb3;
+  }
+
+  .slide:nth-child(38) {
+    background-color: #cf2a54;
+  }
+
+  .slide:nth-child(39) {
+    background-color: #cdbaa7;
+  }
+
+  .slide:nth-child(40) {
+    background-color: #9d93c2;
+  }
+
+  .slide:nth-child(41) {
+    background-color: #da3e68;
+  }
+
+  .slide:nth-child(42) {
+    background-color: #2f506f;
+  }
+
+  .slide:nth-child(43) {
+    background-color: #716741;
+  }
+
+  .slide:nth-child(44) {
+    background-color: #c487c9;
+  }
+
+  .slide:nth-child(45) {
+    background-color: #354569;
+  }
+
+  .slide:nth-child(46) {
+    background-color: #afdfb3;
+  }
+
+  .slide:nth-child(47) {
+    background-color: #6396e3;
+  }
+
+  .slide:nth-child(48) {
+    background-color: #713844;
+  }
+
+  .slide:nth-child(49) {
+    background-color: #48cb62;
+  }
+
+  .slide:nth-child(50) {
+    background-color: #81842a;
+  }
+
+  .slide:nth-child(51) {
+    background-color: #942e8a;
+  }
+
+  .slide:nth-child(52) {
+    background-color: #df5899;
+  }
+
+  .slide:nth-child(53) {
+    background-color: #67773c;
+  }
+
+  .slide:nth-child(54) {
+    background-color: #c4bd92;
+  }
+
+  .slide:nth-child(55) {
+    background-color: #cda7e7;
+  }
+
+  .slide:nth-child(56) {
+    background-color: #bc3a34;
+  }
+
+  .slide:nth-child(57) {
+    background-color: #472494;
+  }
+
+  .slide:nth-child(58) {
+    background-color: #603e60;
+  }
+
+  .slide:nth-child(59) {
+    background-color: #a5c3a2;
+  }
+
+  .slide:nth-child(60) {
+    background-color: #5bc88a;
+  }
+
+  .slide:nth-child(61) {
+    background-color: #6cc24c;
+  }
+
+  .slide:nth-child(62) {
+    background-color: #dc6fca;
+  }
+
+  .slide:nth-child(63) {
+    background-color: #d0aa86;
+  }
+
+  .slide:nth-child(64) {
+    background-color: #4cae63;
+  }
+
+  .slide:nth-child(65) {
+    background-color: #c8d5ae;
+  }
+
+  .slide:nth-child(66) {
+    background-color: #dcebbd;
+  }
+
+  .slide:nth-child(67) {
+    background-color: #d1d2e6;
+  }
+
+  .slide:nth-child(68) {
+    background-color: #ab7963;
+  }
+
+  .slide:nth-child(69) {
+    background-color: #9126ab;
+  }
+
+  .slide:nth-child(70) {
+    background-color: #e1efa9;
+  }
+
+  .slide:nth-child(71) {
+    background-color: #a4cadf;
+  }
+
+  .slide:nth-child(72) {
+    background-color: #726fd8;
+  }
+
+  .slide:nth-child(73) {
+    background-color: #81dab0;
+  }
+
+  .slide:nth-child(74) {
+    background-color: #429e4b;
+  }
+
+  .slide:nth-child(75) {
+    background-color: #61b3b1;
+  }
+
+  .slide:nth-child(76) {
+    background-color: #b4a5e9;
+  }
+
+  .slide:nth-child(77) {
+    background-color: #396b6f;
+  }
+
+  .slide:nth-child(78) {
+    background-color: #569f71;
+  }
+
+  .slide:nth-child(79) {
+    background-color: #ab639f;
+  }
+
+  .slide:nth-child(80) {
+    background-color: #5674d7;
+  }
+
+  .slide:nth-child(81) {
+    background-color: #537548;
+  }
+
+  .slide:nth-child(82) {
+    background-color: #6db2d5;
+  }
+
+  .slide:nth-child(83) {
+    background-color: #91505b;
+  }
+
+  .slide:nth-child(84) {
+    background-color: #34bc4d;
+  }
+
+  .slide:nth-child(85) {
+    background-color: #99a2cc;
+  }
+
+  .slide:nth-child(86) {
+    background-color: #54b05c;
+  }
+
+  .slide:nth-child(87) {
+    background-color: #d2eae4;
+  }
+
+  .slide:nth-child(88) {
+    background-color: #84b3a7;
+  }
+
+  .slide:nth-child(89) {
+    background-color: #8572d5;
+  }
+
+  .slide:nth-child(90) {
+    background-color: #bdd0d6;
+  }
+
+  .slide:nth-child(91) {
+    background-color: #c9d75b;
+  }
+
+  .slide:nth-child(92) {
+    background-color: #d8cadd;
+  }
+
+  .slide:nth-child(93) {
+    background-color: #c68e4e;
+  }
+
+  .slide:nth-child(94) {
+    background-color: #702f75;
+  }
+
+  .slide:nth-child(95) {
+    background-color: #9d4d65;
+  }
+
+  .slide:nth-child(96) {
+    background-color: #3638ce;
+  }
+
+  .slide:nth-child(97) {
+    background-color: #63a196;
+  }
+
+  .slide:nth-child(98) {
+    background-color: #eae9dc;
+  }
+
+  .slide:nth-child(99) {
+    background-color: #6b3b38;
+  }
+
+  .slide:nth-child(100) {
+    background-color: #901d66;
+  }

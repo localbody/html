@@ -1,0 +1,59 @@
+body {
+    background: #e0e0e0;
+  }
+
+  * {
+    transition: 0.5s ease-in-out;
+    box-sizing: border-box;
+  }
+
+  .accordion {
+    margin: 94px auto 0 auto;
+    max-width: 500px;
+    height: 300px;
+    position: relative;
+  }
+  .accordion input.tab-toggle {
+    position: absolute;
+    opacity: 0;
+  }
+  .accordion input.tab-toggle:checked + label {
+    background: white;
+  }
+  .accordion input.tab-toggle:checked + label .tab-title:hover {
+    background: transparent;
+  }
+  .accordion input.tab-toggle:checked + label .tab {
+    visibility: visible;
+    opacity: 1;
+  }
+  .accordion label {
+    float: left;
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 3px 3px 0 0;
+  }
+  .accordion label:first-of-type .tab {
+    border-radius: 0 3px 3px 3px;
+  }
+  .accordion label .tab-title {
+    display: block;
+    padding: 20px;
+    border-radius: 3px 3px 0 0;
+  }
+  .accordion label .tab-title:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.1);
+  }
+  .accordion .tab {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    padding: 20px;
+    top: 56px;
+    left: 0;
+    min-width: 100%;
+    height: 244px;
+    background: white;
+    border-radius: 3px;
+  }

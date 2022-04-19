@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="accordion">
+
+        <input class="tab-toggle" type="radio" name="my_radio_group" id="tab_one" />
+        <label for="tab_one">
+          <span class="tab-title">Tab One</span>
+          <div class="tab" id="tab_one_wrapper">
+            <p>Hi. I'm tab one's content. Nice to meet you.</p>
+          </div>
+        </label>
+
+        <input class="tab-toggle" type="radio" name="my_radio_group" id="tab_two" checked/>
+        <label for="tab_two">
+          <span class="tab-title">Tab Two</span>
+          <div class="tab" id="tab_two_wrapper">
+            <p>Hi. I'm tab two's content. Nice to meet you.</p>
+          </div>
+        </label>
+
+        <input class="tab-toggle" type="radio" name="my_radio_group" id="tab_three" />
+        <label for="tab_three">
+          <span class="tab-title">Tab Three</span>
+          <div class="tab" id="tab_three_wrapper">
+            <p>Hi. I'm tab three's content. Nice to meet you.</p>
+          </div>
+        </label>
+
+        <input class="tab-toggle" type="radio" name="my_radio_group" id="tab_four" />
+        <label for="tab_four">
+          <span class="tab-title">Tab Four</span>
+          <div class="tab" id="tab_four_wrapper">
+            <p>Hi. I'm tab four's content. Nice to meet you.</p>
+          </div>
+        </label>
+
+
+    </div>
+
+    <script src="./jquery.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fontawesome.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="star-ratings-input">
+        <h2>Rating Input 1</h2>
+        <input type="radio" id="one-star" value="1" name="star-rating" checked/>
+        <input type="radio" id="two-star" value="2" name="star-rating"/>
+        <input type="radio" id="three-star" value="3" name="star-rating"/>
+        <input type="radio" id="four-star" value="4" name="star-rating"/>
+        <input type="radio" id="five-star" value="5" name="star-rating"/>
+        <div class="stars">
+          <label for="five-star" class="fas fa-star"></label>
+          <label for="four-star" class="fas fa-star"></label>
+          <label for="three-star" class="fas fa-star"></label>
+          <label for="two-star" class="fas fa-star"></label>
+          <label for="one-star" class="fas fa-star"></label>
+        </div>
+      </div>
+      <div class="star-ratings-input">
+        <h2>Rating Input 2</h2>
+        <input type="radio" id="one-star-two" value="1" name="star-rating-two" checked/>
+        <input type="radio" id="two-star-two" value="2" name="star-rating-two"/>
+        <input type="radio" id="three-star-two" value="3" name="star-rating-two"/>
+        <input type="radio" id="four-star-two" value="4" name="star-rating-two"/>
+        <input type="radio" id="five-star-two" value="5" name="star-rating-two"/>
+        <div class="stars">
+          <label for="five-star-two" class="fas fa-star"></label>
+          <label for="four-star-two" class="fas fa-star"></label>
+          <label for="three-star-two" class="fas fa-star"></label>
+          <label for="two-star-two" class="fas fa-star"></label>
+          <label for="one-star-two" class="fas fa-star"></label>
+        </div>
+      </div>
+
+      <div class="star-ratings-average">
+        <h2>Average Rating</h2>
+        <!-- uses background-size to show the percentage -->
+        <div class="stars">
+          <div class="fas fa-star"></div>
+          <div class="fas fa-star"></div>
+          <div class="fas fa-star"></div>
+          <div class="fas fa-star"></div>
+          <div class="fas fa-star"></div>
+        </div>
+    </div>
+
+    <script src="./jquery.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
