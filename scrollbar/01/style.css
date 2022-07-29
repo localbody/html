@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  background-color: rgba(250, 206, 80, 0.8);
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.box {
+  font-family: arial;
+  width: 500px;
+  height: 300px;
+  overflow-y: scroll;
+  border: 1px solid red;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Стилизация скролла для Mozilla Firefox */
+html,
+body {
+  scrollbar-color: #458245 #714826; /* «цвет ползунка» | «цвет полосы скроллбара» */
+  scrollbar-width: auto; /* толщина: auto | thin | none */
+}
+
+/*  Для Google Chrome, Яндекс.Браузер, Safari и Opera используйте следующие CSS свойства. */
+/* полоса прокрутки (скроллбар) */
+.box::-webkit-scrollbar {
+  width: 15px; /* ширина для вертикального скролла */
+  height: 8px; /* высота для горизонтального скролла */
+  background-color: #458245;
+}
+
+/* ползунок скроллбара */
+.box::-webkit-scrollbar-thumb {
+  background-color: #143861;
+}

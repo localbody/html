@@ -5,46 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="container">
-        <h2>FAQ</h2>
-        <div class="accordion">
-          <div class="accordion-item">
-            <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Why is the moon sometimes out during the day?</span><span class="icon" aria-hidden="true"></span></button>
-            <div class="accordion-content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+    <h1>Аккордеон на чистом CSS<sup>2.0</sup></h1>
+    <div class="row">
+      <div class="col">
+        <h2>Открыть <b>несколько</b></h2>
+        <div class="tabs">
+          <div class="tab">
+            <input type="checkbox" id="chck1">
+            <label class="tab-label" for="chck1">Итем 1</label>
+            <div class="tab-content">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, reiciendis!
             </div>
           </div>
-          <div class="accordion-item">
-            <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">Why is the sky blue?</span><span class="icon" aria-hidden="true"></span></button>
-            <div class="accordion-content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">Will we ever discover aliens?</span><span class="icon" aria-hidden="true"></span></button>
-            <div class="accordion-content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">How much does the Earth weigh?</span><span class="icon" aria-hidden="true"></span></button>
-            <div class="accordion-content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">How do airplanes stay up?</span><span class="icon" aria-hidden="true"></span></button>
-            <div class="accordion-content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+          <div class="tab">
+            <input type="checkbox" id="chck2">
+            <label class="tab-label" for="chck2">Итем 2</label>
+            <div class="tab-content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. A, in!
             </div>
           </div>
         </div>
+      </div>
+      <div class="col">
+        <h2>Открыть <b>один</b></h2>
+        <div class="tabs">
+          <div class="tab">
+            <input type="radio" id="rd1" name="rd">
+            <label class="tab-label" for="rd1">Итем 1</label>
+            <div class="tab-content">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, facilis.
+            </div>
+          </div>
+          <div class="tab">
+            <input type="radio" id="rd2" name="rd">
+            <label class="tab-label" for="rd2">Итем 2</label>
+            <div class="tab-content">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, aut.
+            </div>
+          </div>
+          <div class="tab">
+            <input type="radio" id="rd3" name="rd">
+            <label for="rd3" class="tab-close">Закрыть &times;</label>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="./jquery.min.js"></script>
-    <script src="main.js"></script>
+    <script src="./main.js"></script>
 </body>
 </html>

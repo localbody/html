@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <label class="menu-container">
+      <input type="checkbox" name="menu-button" onclick="openDrawer();" />
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <div class="menu-drawer" id="menu-drawer" opened="false">
+      <ul>
+        <li>The app</li>
+        <li>Out story</li>
+        <li>Out blog</li>
+        <li>Learn more</li>
+      </ul>
+    </div>
+
+    <article class="title">
+      <h1>Tap to show menu</h1>
+      <p>
+        Check this almost pure CSS menu animation. Menu button made with hidden
+        checkbox trick
+      </p>
+    </article>
+
+    <script src="./jquery.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

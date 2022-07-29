@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <label for="select-el" class="combo-label">Native select element</label>
+    <select id="select-el" class="combo combo-input" multiple>
+      <option>Apple</option>
+      <option>Apricot</option>
+      <option>Banana</option>
+      <option>Blackberry</option>
+      <option>Blueberry</option>
+      <option>Cantaloupe</option>
+      <option>Cherry</option>
+      <option>Date</option>
+      <option>Durian</option>
+      <option>Eggplant</option>
+      <option>Fig</option>
+      <option>Grape</option>
+      <option>Guava</option>
+      <option>Huckleberry</option>
+    </select>
+
+    <label for="combo1" class="combo-label"
+      >Multiselect with comma-separated values</label
+    >
+    <div class="combo js-csv">
+      <div
+        role="combobox"
+        aria-haspopup="listbox"
+        aria-expanded="false"
+        aria-owns="listbox1"
+        class="input-wrapper"
+      >
+        <input
+          aria-activedescendant=""
+          aria-autocomplete="list"
+          id="combo1"
+          class="combo-input"
+          type="text"
+        />
+      </div>
+      <div
+        class="combo-menu"
+        role="listbox"
+        aria-multiselectable="true"
+        id="listbox1"
+      ></div>
+    </div>
+
+    <label id="combo2-label" class="combo-label"
+      >Multiselect with buttons</label
+    >
+    <span id="combo2-remove" style="display: none">remove</span>
+    <!-- used as descriptive text for option buttons; if used within the button text itself, it ends up being read with the input name -->
+    <ul class="selected-options" id="combo2-selected"></ul>
+    <div class="combo js-multi-buttons">
+      <div
+        role="combobox"
+        aria-haspopup="listbox"
+        aria-expanded="false"
+        aria-owns="listbox2"
+        class="input-wrapper"
+      >
+        <input
+          aria-activedescendant=""
+          aria-autocomplete="list"
+          aria-labelledby="combo2-label combo2-selected"
+          id="combo2"
+          class="combo-input"
+          type="text"
+        />
+      </div>
+      <div
+        class="combo-menu"
+        role="listbox"
+        aria-multiselectable="true"
+        id="listbox2"
+      ></div>
+    </div>
+
+    <label id="combo3-label" class="combo-label"
+      >Multiselect with inline buttons</label
+    >
+    <span id="combo3-remove" style="display: none">remove</span>
+    <!-- used as descriptive text for option buttons; if used within the button text itself, it ends up being read with the input name -->
+    <div class="combo js-inline-buttons">
+      <div
+        role="combobox"
+        aria-haspopup="listbox"
+        aria-expanded="false"
+        aria-owns="listbox3"
+        class="input-wrapper multiselect-inline"
+      >
+        <ul
+          class="selected-options"
+          aria-live="assertive"
+          aria-atomic="false"
+          aria-relevant="additions removals"
+          id="combo3-selected"
+        ></ul>
+        <input
+          aria-activedescendant=""
+          aria-autocomplete="list"
+          aria-labelledby="combo3-label combo3-selected"
+          id="combo3"
+          class="combo-input"
+          type="text"
+        />
+      </div>
+      <div
+        class="combo-menu"
+        role="listbox"
+        aria-multiselectable="true"
+        id="listbox3"
+      ></div>
+    </div>
+
+    <script src="./jquery.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+.rangeSlider {
+    --height: 3em;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    min-height: var(--height);
+    min-width: 4em;
+    box-shadow: inset 0 0 0 1px;
+}
+
+.rangeSlider>input {
+    line-height: var(--height);
+    min-height: var(--height);
+    appearance: none;
+    display: block;
+    position: absolute;
+    inset: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 1em;
+    border: none;
+    background: transparent;
+    box-shadow: 0 0 0 0.1em;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.rangeSlider label {
+    line-height: var(--height);
+    padding-left: 0.5em;
+    user-select: none;
+}
+
+.rangeSlider [type=number] {
+    z-index: 1;
+    text-align: right;
+    padding-right: 0.5em;
+    pointer-events: none;
+    -moz-appearance: textfield;
+}
+
+.rangeSlider [type=number]::-webkit-inner-spin-button,
+.rangeSlider [type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/*rules for moz and webkit have to be stated individually because of prefixing issue */
+.rangeSlider [type=range]::-moz-range-thumb {
+    opacity: 0.33;
+    border: none;
+    z-index: -1;
+    border-radius: 0;
+    width: 50%;
+    appearance: none;
+    width: 2px;
+    height: 2em;
+    background: currentColor;
+    box-shadow: -100vw 0 0 calc(100vw) currentColor;
+    cursor: ew-resize;
+    border-radius: 0%;
+}
+
+.rangeSlider [type=range]::-webkit-slider-thumb {
+    opacity: 0.33;
+    border: none;
+    z-index: -1;
+    border-radius: 0;
+    width: 50%;
+    appearance: none;
+    width: 2px;
+    height: 2em;
+    background: currentColor;
+    box-shadow: -100vw 0 0 calc(100vw) currentColor;
+    cursor: pointer;
+    border-radius: 0%;
+}
+
+.rangeSlider [type=range]::-webkit-slider-runnable-track,
+.rangeSlider [type=range]::-moz-range-track {
+    color: transparent;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
+
+/*just for demo*/
+body {
+    display: grid;
+    place-items: middle;
+    font-family: sans-serif;
+    align-items: center;
+    margin: 0;
+    padding: 1em 4em;
+    min-height: 100vh;
+    font-size: clamp(1rem, -0.75rem + 3vw, 3rem);
+}
+
+pre {
+    width: 100%;
+    overflow: auto;
+    font-size: 0.5em;
+}

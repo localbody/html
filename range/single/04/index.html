@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="vfont rangeSlider">
+        <label fpr="rangenumber">Weight</label>
+        <input type="number" id="rangenumber" min="100" max="900" value="400" oninput="range.value=value">
+        <input type="range" value="70" min="100" max="900" id="range" oninput="rangenumber.value=value"/>
+    </div>
+
+    <pre>this is a combined number/range input
+
+      * scrollbar on hover works,
+      * click and drag works
+      * double click to set value
+      (should work via removing
+      pointer-events:none
+      from [type="number"])
+    </pre>
+
+    <script src="./jquery.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>

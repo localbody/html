@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <style>
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 140px;
+        width: 200px;
+      }
+      body {
+        overflow: hidden;
+        background: #224;
+      }
+    </style>
+    <svg viewbox="0 0 200 120">
+      <path
+        d="M 10 50 A 10 10 90 0 0 90 50 A 10 10 90 0 0 10 50"
+        stroke="#ccc"
+        stroke-width="2"
+        fill="none"
+      />
+      <path
+        d="M 10 50 A 10 10 90 0 0 90 50 A 10 10 90 0 0 10 50"
+        stroke="#ccc"
+        stroke-width="5"
+        fill="none"
+        stroke-dasharray="63"
+      >
+        <animateTransform
+          attributeName="transform"
+          attributeType="XML"
+          type="rotate"
+          from="0 50 50"
+          to="360 50 50"
+          dur="5s"
+          repeatCount="indefinite"
+        />
+      </path>
+      <path
+        d="M 82 74 L 97 90 H 145 M 150 115 V 50 H 185 L 197 61 V 115 Z"
+        stroke="#ccc"
+        stroke-width="3"
+        fill="none"
+      />
+      <path d="M 155 58 H 189" stroke="#ccc" stroke-width="1" fill="none">
+        <animate
+          attributeName="d"
+          dur="2"
+          repeatCount="indefinite"
+          begin="0"
+          values="M 155 50 H 170; M 155 115 H 189"
+        />
+      </path>
+      <path d="M 155 58 H 189" stroke="#ccc" stroke-width="1" fill="none">
+        <animate
+          attributeName="d"
+          dur="2"
+          repeatCount="indefinite"
+          begin="-0.4"
+          values="M 155 50 H 179; M 155 115 H 189"
+        />
+      </path>
+      <path d="M 155 58 H 189" stroke="#ccc" stroke-width="1" fill="none">
+        <animate
+          attributeName="d"
+          dur="2"
+          repeatCount="indefinite"
+          begin="-0.8"
+          values="M 155 50 H 180; M 155 115 H 189"
+        />
+      </path>
+      <path d="M 155 58 H 189" stroke="#ccc" stroke-width="1" fill="none">
+        <animate
+          attributeName="d"
+          dur="2"
+          repeatCount="indefinite"
+          begin="-1.2"
+          values="M 155 50 H 179; M 155 115 H 189"
+        />
+      </path>
+      <path d="M 155 58 H 189" stroke="#ccc" stroke-width="1" fill="none">
+        <animate
+          attributeName="d"
+          dur="2"
+          repeatCount="indefinite"
+          begin="-1.6"
+          values="M 155 50 H 182; M 155 115 H 189"
+        />
+      </path>
+    </svg>
+
+    <script src="./jquery.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
