@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@600&display=swap');
+
+body {
+    background-color: #333333;
+    font-family: 'Fira Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#textAnimation {
+    display: inline-block;
+    font-size: 100px;
+    text-align: center;
+    position: relative;
+    text-stroke: 2px #f0a900;
+    -webkit-text-stroke: 2px #f0a900;
+    color: transparent;
+}
+
+#textAnimation:after {
+    content: attr(data-text-anim);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    overflow: hidden;
+    color: #f0a900;
+    animation: textAnimation 3s ease-in-out infinite;
+}
+
+@keyframes textAnimation {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}

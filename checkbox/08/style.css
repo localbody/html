@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+form {
+    max-width: 40rem;
+}
+
+form > * + * {
+    margin-top: 1rem;
+}
+
+fieldset > * + * {
+    margin-top: 0.75rem;
+}
+
+fieldset {
+    padding: 1.5rem;
+}
+
+.group {
+    display: flex;
+    align-items: center;
+}
+
+label {
+    margin: 0 0.5rem;
+}
+
+input:is([type='checkbox'], [type='radio']) {
+    -webkit-appearance: none;
+    width: 2em;
+    height: 2em;
+    background: lightgrey;
+    border: 2px solid grey;
+    border-radius: 0.3em;
+    transition: background-color 300ms, border-color 300ms;
+}
+input:is([type='checkbox'], [type='radio']):hover {
+    background: pink;
+    border: 2px solid pink;
+}
+input:is([type='checkbox'], [type='radio']):focus {
+    outline: 2px solid hotpink;
+    outline-offset: 2px;
+}
+input:is([type='checkbox'], [type='radio']):checked {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' viewBox='-10 -10 64.56 64.56'%3E%3Cpath d='M23.297 38.74a6.563 6.563 0 0 1-10.16.499L1.308 26.112a5.083 5.083 0 1 1 7.551-6.805l8.369 9.288a.617.617 0 0 0 .956-.047L35.386 5.217a5.083 5.083 0 1 1 8.181 6.032L23.297 38.74z'/%3E%3C/svg%3E"),
+        pink;
+    background-repeat: no-repeat;
+    border: 2px solid pink;
+}
+
+input:is([type='radio']) {
+    border-radius: 50%;
+}
