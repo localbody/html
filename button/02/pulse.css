@@ -1,0 +1,49 @@
+.button--pulse {
+  padding: 1em 3em;
+
+  position: relative;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.button--pulse::after {
+  content: '';
+  position: absolute;
+  top: var(--pulseY);
+  left: var(--pulseX);
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 750ms;
+  /* z-index: -1; */
+  width: 150%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background: red;
+  opacity: 0.5;
+}
+
+.pulse::after {
+  -webkit-animation: pulse 500ms;
+  animation: pulse 500ms;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+}
