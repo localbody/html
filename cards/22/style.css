@@ -1,0 +1,67 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-size: 16pt;
+  color: #1a1a1a;
+  background: #fffffa;
+}
+
+.card {
+  position: relative;
+  width: max(50vw, 350px - 3vw);
+  height: 60vmin;
+  background: #f7f3d5;
+  border: 1px solid #433f0e;
+  border-radius: 15px;
+  box-shadow: 15px 15px 37px -10px #7e7e7e;
+  overflow: hidden;
+}
+.card:hover {
+  cursor: pointer;
+}
+
+.text-holder {
+  width: 60%;
+  margin: clamp(1rem, 6%, 3rem);
+}
+h1,
+p {
+  margin-bottom: clamp(0.5rem, 2%, 1rem);
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+h1 {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+}
+p {
+  font-size: clamp(1rem, 4vw, 1.5rem);
+}
+.toggled p,
+.toggled h1 {
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+.image-holder {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  width: 20%;
+  height: 90%;
+  background-image: url(https://assets.codepen.io/4787486/pattern4.jpg);
+  background-size: cover;
+  border-radius: 3px;
+  box-shadow: 3px 3px 10px 0 rgba(0 0 0 / 0.7);
+  transition: all 0.4s ease-in-out 0.075s;
+}
+.toggled .image-holder {
+  right: 0;
+  height: 100%;
+  width: 100%;
+}

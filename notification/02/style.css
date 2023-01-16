@@ -1,0 +1,33 @@
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+}
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+.hs-button {
+    background: #007bff;
+    color: #fff;
+    height: 32px;
+    border: none;
+    border-radius: 5px;
+    animation: slideIn 5s ease;
+}
+
+.hs-notify {
+    max-width: 200px;
+    animation: slideIn 5s ease;
+    border-radius: 5px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+.hs-notify.will-exit {
+    animation: fadeOut 5s ease;
+}

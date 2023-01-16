@@ -1,0 +1,424 @@
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+  input[type='checkbox'],
+  input[type='radio'] {
+    --active: #5628ee;
+    --active-inner: #fff;
+    --input-border: #cdd9ed;
+    --input-border-hover: #23c4f8;
+    --background: #fff;
+    --disabled: #f5f9ff;
+    --disabled-inner: #e4ecfa;
+    --shadow-inner: rgba(18, 22, 33, 0.1);
+    height: 21px;
+    outline: none;
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    cursor: pointer;
+    height: 21px;
+    border: 1px solid var(--input-border);
+    background: var(--background);
+    transition: background 0.3s ease, border-color 0.3s ease;
+  }
+  input[type='checkbox']:after,
+  input[type='radio']:after {
+    content: '';
+    display: block;
+    left: 0;
+    top: 0;
+    position: absolute;
+    transition: transform 0.3s ease, opacity 0.2s ease, filter 0.3s ease;
+  }
+  input[type='checkbox']:checked,
+  input[type='radio']:checked {
+    background: var(--active);
+    border-color: var(--active);
+  }
+  input[type='checkbox']:checked:after,
+  input[type='radio']:checked:after {
+    filter: drop-shadow(0 1px 2px var(--shadow-inner));
+    transition: opacity 0.3s ease, filter 0.3s ease,
+      transform 0.6s cubic-bezier(0.175, 0.88, 0.32, 1.2);
+  }
+  input[type='checkbox']:disabled,
+  input[type='radio']:disabled {
+    cursor: not-allowed;
+    opacity: 0.9;
+    background: var(--disabled);
+  }
+  input[type='checkbox']:disabled:checked,
+  input[type='radio']:disabled:checked {
+    background: var(--disabled-inner);
+    border-color: var(--input-border);
+  }
+  input[type='checkbox']:hover:not(:checked):not(:disabled),
+  input[type='radio']:hover:not(:checked):not(:disabled) {
+    border-color: var(--input-border-hover);
+  }
+  input[type='checkbox']:not(.switch),
+  input[type='radio']:not(.switch) {
+    width: 21px;
+  }
+  input[type='checkbox']:not(.switch):after,
+  input[type='radio']:not(.switch):after {
+    opacity: 0;
+  }
+  input[type='checkbox']:not(.switch):checked:after,
+  input[type='radio']:not(.switch):checked:after {
+    opacity: 1;
+  }
+
+  input[type='checkbox']:not(.switch) {
+    border-radius: 6px;
+  }
+  input[type='checkbox']:not(.switch):after {
+    width: 5px;
+    height: 9px;
+    border: 2px solid var(--active-inner);
+    border-top: 0;
+    border-left: 0;
+    left: 7px;
+    top: 4px;
+    transform: rotate(20deg);
+  }
+  input[type='checkbox']:not(.switch):checked:after {
+    transform: rotate(43deg);
+  }
+  input[type='checkbox'].switch {
+    width: 38px;
+    border-radius: 11px;
+  }
+  input[type='checkbox'].switch:after {
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: var(--input-border);
+  }
+  input[type='checkbox'].switch:checked:after {
+    background: var(--active-inner);
+    transform: translateX(17px);
+  }
+  input[type='checkbox'].switch:disabled:not(:checked):after {
+    opacity: 0.6;
+  }
+
+  input[type='radio'] {
+    border-radius: 50%;
+  }
+  input[type='radio']:after {
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    background: var(--active-inner);
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  input[type='radio']:checked:after {
+    background: var(--active-inner);
+    transform: scale(0.5);
+  }
+}
+ul {
+  margin: 12px;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  max-width: 360px;
+}
+ul li {
+  margin: 12px 0;
+  padding-left: 48px;
+  position: relative;
+}
+ul li input[type='checkbox'],
+ul li input[type='radio'] {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+ul li input[type='text'] {
+  line-height: 21px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  color: #6c7486;
+  background: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  width: 100%;
+  font-family: 'Source Sans Pro', Arial;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f9ff;
+}
+@media (max-width: 800px) {
+  body {
+    flex-direction: column;
+  }
+}
+
+.running {
+  --color: #fff;
+  --duration: 0.7s;
+}
+.running .outer {
+  -webkit-animation: outer var(--duration) linear infinite;
+  animation: outer var(--duration) linear infinite;
+}
+.running .outer .body {
+  background: var(--color);
+  height: 15px;
+  width: 8px;
+  border-radius: 4px;
+  transform-origin: 4px 11px;
+  position: relative;
+  transform: rotate(32deg);
+  -webkit-animation: body var(--duration) linear infinite;
+  animation: body var(--duration) linear infinite;
+}
+.running .outer .body:before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  bottom: 16px;
+  left: 0;
+  position: absolute;
+  background: var(--color);
+}
+.running .outer .body .arm,
+.running .outer .body .arm:before,
+.running .outer .body .leg,
+.running .outer .body .leg:before {
+  content: '';
+  width: var(--w, 11px);
+  height: 4px;
+  top: var(--t, 0);
+  left: var(--l, 2px);
+  border-radius: 2px;
+  transform-origin: 2px 2px;
+  position: absolute;
+  background: var(--c, var(--color));
+  transform: rotate(var(--r, 0deg));
+  -webkit-animation: var(--name, arm-leg) var(--duration) linear infinite;
+  animation: var(--name, arm-leg) var(--duration) linear infinite;
+}
+.running .outer .body .arm:before {
+  --l: 7px;
+  --name: arm-b;
+}
+.running .outer .body .arm.front {
+  --r: 24deg;
+  --r-to: 164deg;
+}
+.running .outer .body .arm.front:before {
+  --r: -48deg;
+  --r-to: -36deg;
+}
+.running .outer .body .arm.behind {
+  --r: 164deg;
+  --r-to: 24deg;
+}
+.running .outer .body .arm.behind:before {
+  --r: -36deg;
+  --r-to: -48deg;
+}
+.running .outer .body .leg {
+  --w: 12px;
+  --t: 11px;
+}
+.running .outer .body .leg:before {
+  --t: 0;
+  --l: 8px;
+}
+.running .outer .body .leg.front {
+  --r: 10deg;
+  --r-to: 108deg;
+}
+.running .outer .body .leg.front:before {
+  --r: 18deg;
+  --r-to: 76deg;
+}
+.running .outer .body .leg.behind {
+  --r: 108deg;
+  --r-to: 10deg;
+  --c: none;
+}
+.running .outer .body .leg.behind:before {
+  --c: var(--color);
+  --r: 76deg;
+  --r-to: 18deg;
+}
+.running .outer .body .leg.behind:after {
+  content: '';
+  top: 0;
+  right: 0;
+  height: 4px;
+  width: 6px;
+  -webkit-clip-path: polygon(2px 0, 6px 0, 6px 4px, 0 4px);
+  clip-path: polygon(2px 0, 6px 0, 6px 4px, 0 4px);
+  border-radius: 0 2px 2px 0;
+  position: absolute;
+  background: var(--color);
+}
+
+@-webkit-keyframes outer {
+  50% {
+    transform: translateY(0);
+  }
+  25%,
+  75% {
+    transform: translateY(4px);
+  }
+}
+
+@keyframes outer {
+  50% {
+    transform: translateY(0);
+  }
+  25%,
+  75% {
+    transform: translateY(4px);
+  }
+}
+@-webkit-keyframes body {
+  50% {
+    transform: rotate(16deg);
+  }
+  25%,
+  75% {
+    transform: rotate(24deg);
+  }
+}
+@keyframes body {
+  50% {
+    transform: rotate(16deg);
+  }
+  25%,
+  75% {
+    transform: rotate(24deg);
+  }
+}
+@-webkit-keyframes arm-leg {
+  50% {
+    transform: rotate(var(--r-to));
+  }
+}
+@keyframes arm-leg {
+  50% {
+    transform: rotate(var(--r-to));
+  }
+}
+@-webkit-keyframes arm-b {
+  30%,
+  70% {
+    transform: rotate(var(--r-to));
+  }
+}
+@keyframes arm-b {
+  30%,
+  70% {
+    transform: rotate(var(--r-to));
+  }
+}
+.buttons {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.buttons button {
+  border: 0;
+  background: 0;
+  padding: 8px 16px;
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  -webkit-appearance: none;
+  color: var(--c, #8a91b4);
+  transition: color 0.3s, transform 0.3s;
+  transform: scale(var(--s, 1));
+}
+.buttons button:hover {
+  --c: #d1d6ee;
+}
+.buttons button:active {
+  --s: 0.9;
+}
+
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: inherit;
+}
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  font-family: 'Roboto', Arial;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #2b3044;
+}
+body .running {
+  zoom: 2;
+  margin-top: -32px;
+}
+body .dribbble {
+  position: fixed;
+  display: block;
+  right: 20px;
+  bottom: 20px;
+}
+body .dribbble img {
+  display: block;
+  height: 28px;
+}
+body .twitter {
+  position: fixed;
+  display: block;
+  right: 64px;
+  bottom: 14px;
+}
+body .twitter svg {
+  width: 32px;
+  height: 32px;
+  fill: #1da1f2;
+}
