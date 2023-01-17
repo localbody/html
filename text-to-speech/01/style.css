@@ -1,117 +1,117 @@
 * {
-  font-family: 'Roboto Condensed', sans-serif;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #d6efed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #d6efed;
 }
 
 main {
-  background-color: #4fbdba;
-  height: 27rem;
-  width: 23rem;
-  border-radius: 1.25rem;
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
-    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
-    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
+    background-color: #4fbdba;
+    height: 27rem;
+    width: 23rem;
+    border-radius: 1.25rem;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+        rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+        rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
 }
 
 .title {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #072227;
-  text-shadow: 1px 1px 1px #010;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #072227;
+    text-shadow: 1px 1px 1px #010;
 }
 
 .text-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .text-input {
-  color: white;
-  align-self: start;
-  font-weight: bold;
+    color: white;
+    align-self: start;
+    font-weight: bold;
 }
 
 #text {
-  height: 5rem;
-  width: 18rem;
-  border-radius: 0.5rem;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  border: none;
-  resize: none;
-  font-size: 0.85rem;
-  padding: 8px 10px;
-  outline: 2px solid rgba(120, 120, 120, 0.623);
+    height: 5rem;
+    width: 18rem;
+    border-radius: 0.5rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border: none;
+    resize: none;
+    font-size: 0.85rem;
+    padding: 8px 10px;
+    outline: 2px solid rgba(120, 120, 120, 0.623);
 }
 
 .text-voice {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .text-voice-text {
-  font-weight: bold;
-  color: white;
-  align-self: start;
-  margin-bottom: 1rem;
+    font-weight: bold;
+    color: white;
+    align-self: start;
+    margin-bottom: 1rem;
 }
 
 #voice {
-  height: 2rem;
-  width: 18rem;
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-  border-radius: 0.35rem;
-  padding: 0px 10px;
-  outline: 2px solid rgba(120, 120, 120, 0.623);
+    height: 2rem;
+    width: 18rem;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    border-radius: 0.35rem;
+    padding: 0px 10px;
+    outline: 2px solid rgba(120, 120, 120, 0.623);
 }
 
 button {
-  background-color: #072227;
-  color: white;
-  height: 2.5rem;
-  width: 18rem;
-  border-radius: 0.5rem;
-  margin: 1rem;
-  border: none;
-  font-size: 1rem;
-  font-weight: bold;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    background-color: #072227;
+    color: white;
+    height: 2.5rem;
+    width: 18rem;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+        rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 @media (max-width: 700px) {
-  main {
-    width: 60vw;
-  }
+    main {
+        width: 60vw;
+    }
 
-  #text {
-    width: 10rem;
-  }
+    #text {
+        width: 10rem;
+    }
 
-  #voice {
-    width: 10rem;
-  }
+    #voice {
+        width: 10rem;
+    }
 
-  button {
-    width: 10rem;
-  }
+    button {
+        width: 10rem;
+    }
 }
