@@ -2,110 +2,109 @@ body {
     font-family: arial;
     margin: 0;
     padding: 0;
-    background-color: rgba(250,206,80,.8);
+    background-color: rgba(250, 206, 80, 0.8);
     font-size: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-  }
-  .filter-box {
+}
+.filter-box {
     width: 300px;
-  }
-  /* Старт Стили для ползунка цен */
-  .slider {
-      position: relative;
-      z-index: 1;
-      height: 4px;
-      margin: 0 10px;
-  }
-  .slider > .track {
-      position: absolute;
-      z-index: 1;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      border-radius: 5px;
-      background-color: #c6aee7;
-  }
-  .slider > .range {
-      position: absolute;
-      z-index: 2;
-      left: 0%;
-      right: 0%;
-      top: 0;
-      bottom: 0;
-      border-radius: 5px;
-      background-color: #6200ee;
-  }
-  .slider > .thumb {
-      position: absolute;
-      cursor: pointer;
-      z-index: 3;
-      width: 16px;
-      height: 16px;
-      background-color: #e94c3c;
-      border-radius: 50%;
-      box-shadow: 0 0 0 0 rgba(98,0,238,.1);
-      transition: box-shadow .3s ease-in-out;
-  }
-  .slider > .thumb.left {
-      left: 0%;
-      transform: translate(-8px, -6px);
-  }
-  .slider > .thumb.right {
-      right: 0%;
-      transform: translate(8px, -6px);
-  }
-  .slider > .thumb.hover {
-      box-shadow: 0 0 0 15px rgba(233,76,60,.1);
-      cursor: pointer;
-  }
-  .slider > .thumb.active {
-      box-shadow: 0 0 0 25px rgba(233,76,60,.2);
-  }
-  input[type=range] {
-      position: absolute;
-      pointer-events: none;
-      -webkit-appearance: none;
-      z-index: 2;
-      height: 4px;
-      width: 100%;
-      opacity: 0;
-  }
-  input[type=range]::-webkit-slider-thumb {
-      pointer-events: all;
-      width: 16px;
-      height: 16px;
-      border-radius: 0;
-      border: 0 none;
-      background-color: red;
-      -webkit-appearance: none;
-      cursor: pointer;
-  }
-  .price_value_min {
-      white-space: nowrap;
-      font-size: 13px;
-      position: absolute;
-      top: -25px;
-      left: 50%;
-      -webkit-transform: translateX(-50%) translateY(0);
-      transform: translateX(-50%) translateY(0);
-  }
-  .price_value_max {
-      white-space: nowrap;
-      font-size: 13px;
-      position: absolute;
-      top: -25px;
-      left: 50%;
-      -webkit-transform: translateX(-50%) translateY(0);
-      transform: translateX(-50%) translateY(0);
-  }
-  .range-slider {
-      margin-top: 40px;
-      margin-bottom: 20px;
-      margin-left: 10px;
-      position: relative;
-  }
-  /* Конец Стили для ползунка цен */
+}
+/* Старт Стили для ползунка цен */
+.slider {
+    position: relative;
+    z-index: 1;
+    height: 4px;
+    margin: 0 10px;
+}
+.slider > .track {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: rgba(86, 207, 225, 0.25);
+}
+.slider > .range {
+    position: absolute;
+    z-index: 2;
+    left: 0%;
+    right: 0%;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: rgb(86, 207, 225);
+}
+.slider > .thumb {
+    position: absolute;
+    cursor: pointer;
+    z-index: 3;
+    width: 8px;
+    height: 18px;
+    background-color: #56cfe1;
+    box-shadow: 0 0 0 0 rgba(98, 0, 238, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+.slider > .thumb.left {
+    left: 0%;
+    transform: translate(-8px, -6px);
+}
+.slider > .thumb.right {
+    right: 0%;
+    transform: translate(8px, -6px);
+}
+.slider > .thumb.hover {
+    box-shadow: 0 0 0 15px rgba(233, 76, 60, 0.1);
+    cursor: pointer;
+}
+.slider > .thumb.active {
+    box-shadow: 0 0 0 25px rgba(233, 76, 60, 0.2);
+}
+input[type='range'] {
+    position: absolute;
+    pointer-events: none;
+    -webkit-appearance: none;
+    z-index: 2;
+    height: 4px;
+    width: 100%;
+    opacity: 0;
+}
+input[type='range']::-webkit-slider-thumb {
+    pointer-events: all;
+    width: 16px;
+    height: 16px;
+    border-radius: 0;
+    border: 0 none;
+    background-color: red;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+.price_value_min {
+    white-space: nowrap;
+    font-size: 13px;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0);
+}
+.price_value_max {
+    white-space: nowrap;
+    font-size: 13px;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0);
+}
+.range-slider {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    position: relative;
+}
+/* Конец Стили для ползунка цен */

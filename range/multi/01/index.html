@@ -1,28 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="filter-box">
-		<div class="title-filter">Цена</div>
-		<div class="range-slider">
-			<input type="range" name="price_min" id="input-left" min="30" max="1500" value="30" />
-			<input type="range" name="price_max" id="input-right" min="30" max="1500" value="1500" />
-			<div class="slider">
-				<div class="track"></div>
-				<div class="range"></div>
-				<div class="thumb left"><div class="price_value_min"></div></div>
-				<div class="thumb right"><div class="price_value_max"></div></div>
-			</div>
-		</div>
-	</div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="filter-box">
+            <div class="range-slider">
+                <input
+                    type="range"
+                    name="price_min"
+                    id="input__price-min"
+                    min="30"
+                    max="1500"
+                    value="30"
+                />
+                <input
+                    type="range"
+                    name="price_max"
+                    id="input__price-max"
+                    min="30"
+                    max="1500"
+                    value="1500"
+                />
 
-    <script src="./jquery.min.js"></script>
-    <script src="main.js"></script>
-</body>
+                <div class="slider">
+                    <div class="track"></div>
+                    <div class="range"></div>
+                    <div class="thumb left">
+                        <div class="price_value_min"></div>
+                    </div>
+                    <div class="thumb right">
+                        <div class="price_value_max"></div>
+                    </div>
+                </div>
+            </div>
+            <input id="price_min_value" type="text" name="price_min_value" />
+
+            <input id="price_max_value" type="text" name="price_max_value" />
+        </div>
+
+        <script src="price_min_max.js"></script>
+    </body>
 </html>
